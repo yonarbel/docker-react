@@ -5,6 +5,6 @@ before_install:
   - docker build -t yonatana/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true USERNAME/docker-react npm run test
+  - docker run -e CI=true yonatana/docker-react npm run test
   
   
