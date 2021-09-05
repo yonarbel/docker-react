@@ -11,6 +11,7 @@ CMD ["npm","run","build"]
 
 # after build --> docker run -p 4001:80 <CREATED_IMG>
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
 
